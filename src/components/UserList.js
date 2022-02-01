@@ -1,4 +1,5 @@
 import React from "react";
+import Item from "./Item";
 
  const UserList = (props) => {
    return (
@@ -6,11 +7,12 @@ import React from "react";
        <h1>List of users</h1>
        {props.users.map((user, index) => {
          return (
-           <div key={index}>
-             <h3>{user.name}</h3>
-             <h4>{user.email}</h4>
-             <h5>{user.gen}</h5>
-           </div>
+           <Item
+           key={index}
+           user={user}
+           editUser={props.editUser}
+           deleteUser={props.deleteUser}
+           />
          );
        })}
      </div>
