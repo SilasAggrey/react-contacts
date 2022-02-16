@@ -8,7 +8,7 @@ import Item from "./Item";
        {props.users.map((user, index) => {
          return (
            <Item
-           key={index}
+           key={user.name}
            user={user}
            editUser={props.editUser}
            deleteUser={props.deleteUser}

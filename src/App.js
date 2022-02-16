@@ -36,7 +36,7 @@ const App = () => {
    return (
      <div>
        <UserForm addUser={addUser} />
-       <UserList users={users} />
+       <UserList users={users} deleteUser={deleteUser} editUser={editUser} />
      </div>
    );
  };
